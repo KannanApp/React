@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "type": "One"
+    },
+    {
+      "id": 2,
+      "type": "Two"
+    },
+    {
+      "id": 3,
+      "type": "Three"
+    },
+    {
+      "id": 4,
+      "type": "Four"
+    },
+    {
+      "id": 5,
+      "type": "Five"
+    }
+  ]
+}
