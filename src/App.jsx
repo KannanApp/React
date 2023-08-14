@@ -1,10 +1,11 @@
 import './App.css';
-import BlogList from "./Dashboard/BlogList";
-import { TextBox } from "./Components/TextBox";
-import { useFetch } from "./Constants/useFetch";
+import BlogList from "./dashboard/BlogList";
+import { TextBox } from "./components/TextBox";
+import { useFetch } from "./constants/useFetch";
 
 function App() {
   const [data, isLoading, error, setData] = useFetch('https://jsonplaceholder.typicode.com/posts');  
+  
   const handleDelete = (idx) => {
     const res = data.filter((item)=> item?.id !== idx);
     setData(res);
