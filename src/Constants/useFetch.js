@@ -1,12 +1,15 @@
 import {useState, useEffect} from "react";
 
-export const useFetch = (url) => {
+export const useFetch = (url, method) => {
     const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState('');
 
     useEffect(() => {
-        fetch(url)
+        fetch(url, {
+            method,
+            headers: {'Content-Type':'application/json'},
+        })
             .then((data) => {
                 if (!data.ok) {
                     throw Error("Smething went wrong in URL");

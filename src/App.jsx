@@ -4,7 +4,7 @@ import { TextBox } from "./components/TextBox";
 import { useFetch } from "./constants/useFetch";
 
 function App() {
-  const [data, isLoading, error, setData] = useFetch('https://jsonplaceholder.typicode.com/posts');  
+  const [data, isLoading, error, setData] = useFetch('https://jsonplaceholder.typicode.com/posts', 'get');  
   
   const handleDelete = (idx) => {
     const res = data.filter((item)=> item?.id !== idx);
