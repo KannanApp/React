@@ -1,4 +1,4 @@
-import {useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 
 export const useFetch = (url, method) => {
     const [data, setData] = useState([]);
@@ -6,9 +6,11 @@ export const useFetch = (url, method) => {
     const [error, setError] = useState('');
 
     useEffect(() => {
+        const abortCont = new AbortController();
         fetch(url, {
+            signal: abortCont.signal,
             method,
-            headers: {'Content-Type':'application/json'},
+            headers: { 'Content-Type': 'application/json' },
         })
             .then((data) => {
                 if (!data.ok) {
@@ -22,9 +24,14 @@ export const useFetch = (url, method) => {
                 setError('');
             })
             .catch(err => {
-                setIsLoading(false);
-                setError(err.message);
+                if (err.name === "AbortError") {
+                    console.log("fetch aborted");
+                } else {
+                    setIsLoading(false);
+                    setError(err.message);
+                }
             });
+        return () => abortCont.abort();
     }, []);
 
     return [data, isLoading, error]
