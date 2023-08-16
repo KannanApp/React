@@ -5,7 +5,7 @@ import { useFetch } from "../constants/useFetch";
 
 const BlogView = () => {
     const { id } = useParams();
-    const [data, isLoading, error] =useFetch(`https://jsonplaceholder.typicode.com/posts/${id}`, 'get');
+    const [data, isLoading, error] =useFetch(`${process.env.REACT_APP_API_URL}${id}`, 'get');
 
     return (
         <div>
