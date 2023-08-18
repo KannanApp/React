@@ -1,11 +1,17 @@
 import "../App.css";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { TextBox } from "../components/TextBox";
 import { useFetch } from "../constants/useFetch";
 
 const BlogView = () => {
     const { id } = useParams();
-    const [data, isLoading, error] =useFetch(`${process.env.REACT_APP_API_URL}${id}`, 'get');
+    const navigate = useNavigate();
+    const [data, isLoading, error] =useFetch(`${process.env.REACT_APP_API_URL}${id}`, 'POST', {});
+
+
+    const onClickHandle = () => {
+        navigate("/");
+    }
 
     return (
         <div>
@@ -14,6 +20,7 @@ const BlogView = () => {
             {data && !error && (
                 <p className="blogViewText">{`Blog Id : ${id} \nTitle: ${data?.title} \nDetails: ${data?.body}`}</p>
             )}
+            <button onClick={onClickHandle} className="Redirect">Delete</button>
         </div>
     );
 }

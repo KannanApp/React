@@ -79,3 +79,77 @@
   white-space: pre;
   font-weight: bold;
 }
+
+.profileDiv{
+  display: flex;
+  flex: 1;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding: 20%;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 4px 4px #f7a1a1;
+}
+
+.profileform{
+  display: flex;
+  flex-direction: column;
+}
+
+.btn_submit{
+  background-color: green;
+  border-width: 0px;
+  border-radius: 4px;
+  margin-top: 20px;
+  height: 45px;
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+}
+
+.textBox{
+  font-size: 14px;
+  color: black;
+  font-weight: 500;
+  border-color: gray;
+  border-radius: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-top: 4px;
+}
+
+.lableName{
+  font-size: 14px;
+  color: black;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.details{
+  white-space: pre-wrap;
+  font-size: 14px;
+  color: red;
+  font-weight: 700;
+}
+
+.delete{
+  border-width: 0px;
+  background-color: red;
+  font-size: 10px;
+  color: white;
+  font-weight: bold;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.not_fount{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
