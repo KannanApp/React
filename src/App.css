@@ -50,3 +50,32 @@
   display: flex;
   justify-content: center;
 }
+
+.content{
+  background-color: lightblue;
+}
+
+.navbar{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  flex: 1;
+}
+
+.links{
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navTab{
+  margin-left: 20px;
+  color: red;
+}
+
+.blogViewText{
+  white-space: pre;
+  font-weight: bold;
+}
