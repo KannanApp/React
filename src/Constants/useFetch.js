@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import axios from "react-native-axios";
 
 export const useFetch = (url, method) => {
     const [data, setData] = useState([]);
