@@ -1,15 +1,11 @@
 import '../App.css';
 import BlogList from "./BlogList";
-import { TextBox } from "../components/TextBox";
-import { useFetch } from "../constants/useFetch";
+import { TextBox } from "../Components/TextBox";
+import { useFetch } from "../Constants/useFetch";
 
 function Feed() {
-  const bodyRequest = {
-    title: "testing",
-    body: "Its decription",
-    userId: 101
-  };
-  const [data, isLoading, error, setData] = useFetch(process.env.REACT_APP_API_URL, 'POST', bodyRequest);  
+  const [data, isLoading, error, setData] = useFetch(
+    process.env.REACT_APP_API_URL, 'GET');  
   
   const handleDelete = (idx) => {
     const res = data.filter((item)=> item?.id !== idx);

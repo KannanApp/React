@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 
 const BlogList = (props) => {
     const {blogs, handleDelete} = props;
-    console.log(blogs);
     
     return (
         <div className="todo_div">
