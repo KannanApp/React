@@ -1,7 +1,7 @@
 import "../App.css";
 import { useParams, useNavigate } from "react-router-dom";
-import { TextBox } from "../components/TextBox";
-import { useFetch } from "../constants/useFetch";
+import { TextBox } from "../Components/TextBox";
+import { useFetch } from "../Constants/useFetch";
 
 const BlogView = () => {
     const { id } = useParams();

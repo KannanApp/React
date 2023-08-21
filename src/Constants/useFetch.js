@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
+import axios from "react-native-axios";
 
-export const useFetch = (url, method, body) => {
+export const useFetch = (url, method) => {
     const [data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState('');
@@ -10,12 +11,9 @@ export const useFetch = (url, method, body) => {
         fetch(url, {
             signal: abortCont.signal,
             method,
-            body: body ? JSON.stringify({
-                title: body?.title,
-                body,
-                userId: body?.userId
-              }) : null,
-            headers: { 'Content-Type': 'application/json' },
+            headers: {
+                "Access-Control-Allow-Headers" : "Content-Type",
+            },
         })
             .then((data) => {
                 if (!data.ok) {
@@ -24,7 +22,7 @@ export const useFetch = (url, method, body) => {
                 return data.json();
             })
             .then((res) => {
-                setData([res]);
+                setData(res);
                 setIsLoading(false);
                 setError('');
             })

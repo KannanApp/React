@@ -9,8 +9,6 @@ const Profile = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const blog = { name, aboutYou, gender };
-        console.log(blog);
         navigate("/");
     }
 
