@@ -6,23 +6,13 @@ const fetchApi = async() => {
 
 export const RNQueryPage = () => {
 
-    const onSuccess = (data) => {
-        console.log("fetch is done", data);
-    }
-
-    const onFailure = (data) => {
-        console.log("fetch is Failure", data);
-    }
-
     const {data, isError, error, isLoading, refetch} = useQuery(
         'sample-data', 
         fetchApi,
         {
             cacheTime: 5000,
             staleTime: 30000,
-            retryOnMount: false,
-            onSuccess: onSuccess,
-            onFailure: onFailure
+            retryOnMount: false
         });
         
     if(isLoading){
