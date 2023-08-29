@@ -2,7 +2,6 @@ import { useEffect, useMemo, useState } from "react";
 import TodoListItem from "./TodoListItem";
 
 export const TodoList = (props) => {
-    console.log("Todo List----");
     const {todos, markTodoCompleted} = props;
     const [search, setSearch] = useState("");
     const [sortDirection, setSortDirection] = useState("0");
