@@ -9,6 +9,7 @@ const NavBar = () => {
                 <Link className="navTab" to={"/"}>Feed</Link>
                 <Link className="navTab" to="/profile">Profile</Link>
                 <Link className="navTab" to={"/rnquery"}>RNQuery</Link>
+                <Link className="navTab" to={"/Formik"}>Formik</Link>
                 <Link className="navTab" to={"/RNPagination"}>RNPagination</Link>
                 <Link className="navTab" to={"/search"}>Search</Link>
             </div>
