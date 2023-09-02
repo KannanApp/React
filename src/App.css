@@ -153,3 +153,20 @@
   justify-content: center;
   align-items: center;
 }
+
+.formik_div{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: 20px;
+}
+
+.error_field{
+ color: red;
+ font-size: 10px; 
+}
+
+.formik_submit{
+  margin: 20px;
+}

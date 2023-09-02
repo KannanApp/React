@@ -8,6 +8,7 @@ import Search from './Dashboard/Search';
 import { RNQueryPage } from './RNQuery/RNQueryPage';
 import { ReactQueryDevtools } from "react-query/devtools";
 import RNQueryPagination from './RNQuery/RNQueryPagination';
+import { FormikFile } from './Formik/Form';
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ function App() {
               <Route path='*' Component={NotFound} />
               <Route path='/rnquery' Component={RNQueryPage} />
               <Route path='/RNPagination' Component={RNQueryPagination} />
+              <Route path='/Formik' Component={FormikFile} />
             </Routes>
           </div>
         </div>
