@@ -1,5 +1,6 @@
 import * as Yup from "yup";
 import { useFormik } from 'formik';
+import { RadioButtonGroup } from "../Components/RadioButtonGroup";
 import '../App.css';
 
 const genderOptions = [
@@ -86,28 +87,5 @@ export const FormikFile = () =>{
 
       <button className="formik_submit" type="submit">Submit</button>
     </form>
-    );
-}
-
-const RadioButtonGroup = ({name, options, onChange}) => {
-    return(
-        <div>
-            {options && options?.map((data) => (
-                <div onClick={()=>onChange('Kannnnnn')}>
-                    <RadioButton name={name} value={data.value} label={data.label} />
-                </div>
-            ))}
-        </div>
-    );
-}
-
-const RadioButton = ({value, label, name}) => {
-    return(
-        <div>
-            <input id={value} type="radio" value={value} name={name} />
-            <label htmlFor={value}>
-                {label}
-            </label>
-        </div>
     );
 }
