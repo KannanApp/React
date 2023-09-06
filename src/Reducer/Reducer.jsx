@@ -1,9 +1,9 @@
 import React, { useReducer } from "react";
 import { DECREMENT, INCREMENT, initialState } from "../Constants/Actions";
-import { ReducerRoot } from "./ReducerRoot";
+import { reducerRoot } from "./ReducerRoot";
 
 const Reducer = () => {
-    const [todos, dispatch] = useReducer(ReducerRoot, initialState);
+    const [todos, dispatch] = useReducer(reducerRoot, initialState);
 
     return (
         <div>
