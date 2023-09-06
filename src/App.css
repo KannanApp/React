@@ -170,3 +170,11 @@
 .formik_submit{
   margin: 20px;
 }
+
+.reducer_div{
+  display: flex;
+  flex-direction: row;
+  height: 20px;
+  align-items: center;
+  padding: 10px;
+}
