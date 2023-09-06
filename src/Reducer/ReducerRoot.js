@@ -1,3 +1,5 @@
+import { DECREMENT, INCREMENT } from "../Constants/Actions";
+
 export const ReducerRoot = (state, action) => {
     switch (action.type) {
         case INCREMENT:
