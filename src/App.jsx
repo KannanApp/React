@@ -9,6 +9,7 @@ import { RNQueryPage } from './RNQuery/RNQueryPage';
 import { ReactQueryDevtools } from "react-query/devtools";
 import RNQueryPagination from './RNQuery/RNQueryPagination';
 import { FormikFile } from './Formik/Form';
+import Reducer from './Reducer/Reducer';
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ function App() {
               <Route path='/rnquery' Component={RNQueryPage} />
               <Route path='/RNPagination' Component={RNQueryPagination} />
               <Route path='/Formik' Component={FormikFile} />
+              <Route path='/reducer' Component={Reducer} />
             </Routes>
           </div>
         </div>
