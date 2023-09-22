@@ -8,6 +8,7 @@ const NavBar = () => {
             <div className="links">
                 <Link className="navTab" to={"/"}>Feed</Link>
                 <Link className="navTab" to="/profile">Profile</Link>
+                <Link className="navTab" to={"/redux"}>Redux</Link>
                 <Link className="navTab" to={"/reducer"}>Reducer</Link>
                 <Link className="navTab" to={"/rnquery"}>RNQuery</Link>
                 <Link className="navTab" to={"/Formik"}>Formik</Link>
